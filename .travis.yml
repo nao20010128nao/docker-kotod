@@ -1,13 +1,14 @@
 sudo: required
 services:
 - docker
-
 notifications:
   email: false
-
 before_script:
-  - docker login -u "$DOCKER_USER" -p "$DOCKER_PASS"
-
+- docker login -u "$DOCKER_USER" -p "$DOCKER_PASS"
 script:
-  - docker build -t "nao20010128nao/docker-kotod" .
-  - docker push "nao20010128nao/docker-kotod"
+- docker build -t "nao20010128nao/docker-kotod" .
+- docker push "nao20010128nao/docker-kotod"
+env:
+  global:
+  - secure: dVDajgIzDuZzQ/a6eAVaC4i7fjJVhv94PYha2lz/OZrkPQQFBo6UDJxx+E5LQD7msa3PZX1T/aR3BEM0hTDM2VBwyWCV3n+Unl7Wh+9L9KgymEX6VUJ+kjF4fTTsq4nMnisaZ02wLmVK+LLIbcQ+cI9/PggyF9fg2BQUQGBCHcVyP3Yk/TAwOiOnZZO5nNDhexorfXXzdyX4k0aRqB6ZLgiRNGhocYzbuaHKyfHV0DwPRzsrBhNrZxJ1SIX1qWfA4QPQ+5E4UYIfTLMDTb0PjGULAhwlXdZdWW1XssTtaPjXDk/2OcoUwJe4+LEgErCTAFVCmrf9nQB6aLQADImYMfH35Kbe4GuFnB+w34bzw6eIE6DYU0qLG9sPgMQwhtKjPUh+Mut+s2Wf4+bHlfq/wzc4QQT0T/H5KrA2eEud9ZVDJAkP9DRqrpGLlMXHRBXq72Omofgniu6qu+vbl2d3U6q1cerL3CMK2DUrT2/o49OxsFf228khyOlLPT9X5vBPCEBsb7VcgXKpn9SoHrHt+WUTVgN5QTMeoFJx2gjngnyLWzGrhXXOJBCmAIY7GdbPd+V7jU1slNFwm6EHDbg0oiF9gVH49bcAvD4RtH58iuL9VLx1Y6qIEuUXj+pYDw+NYbEQD/RdEBQcFtEG9Ez9qXENNJaUjIKnvLOs+zabMXc=
+  - secure: wiZIOCtxJbfz7ueN+StOGpaq/WYOCeS2BFZ8U0b7/S8cEU7mCIBb+6DMFXmn7TgAu0WBfy4gaXgVYsZvw8pyigsbCc2Fi2eFInmW4TKV0hwwswWh/dnd/Z2NVf+amTzNn10QamR1U/CmcOycSYTLpsXALywCoD/JWbcPvLkDT+wwMxZ/UEho2jApMfouyGuzprnEtN3OsHZ80g2jpzAcJ2BtERv1ug7UNf3wKalCaa1oe10IcEkdIKDPverFNVdasn0DG0unM+QHKme10SukChzAXDR8jcBnwzYpiNjBDSKpQ8s6JY9LlZo/3CvgjbCTgkYSPjLE57hNj140w9qF21NtmTbDtzX3sTVMTBECWEORPVFwf6ujefVsKFg5gLsyrunZup6w1lhPGuA1lRnm569v8xOMzOFq5S9atXgtZI5zYxfi+0X2RPWJ/AWwYl00PG2776nA5UojaJg9+hIRXESmxGCu2sczmZaRJEQnv5qp960vm6JXTz+MENHod+rnHBBwvBH0w00cARvcudYytz8/bIdyWavfruFmNnjZ8f3VkGjJGPPjonWoqwXR6H1ChKCnEurfQGbMc618Oy34IvzUIxhB3BC1PxU/jMddyWniCmKqBp9aYVBWfOUfo+f1i5rMArWjXbMiOYp+jW8lwB2uw4f8DMvq4+8LKpYphSM=
