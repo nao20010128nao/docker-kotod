@@ -13,7 +13,7 @@ RUN set -xe && \
     pkg-config \
     software-properties-common \
     git \
-    wget && \
+    wget curl && \
   add-apt-repository -y ppa:bitcoin/bitcoin && \
   apt-get update && \
   apt-get install -y libdb4.8-dev libdb4.8++-dev && \
@@ -29,7 +29,8 @@ RUN set -xe && \
     autoconf \
     pkg-config \
     software-properties-common \
-    git && \
+    git \
+    wget curl && \
   apt-get clean -y
 
 VOLUME /root/.koto
