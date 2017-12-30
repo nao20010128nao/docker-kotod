@@ -4,9 +4,9 @@ ENV DEBIAN_FRONTEND=noninteractive
 ARG REF=master
 
 RUN set -xe && \
-  apt-get update && \
-  apt-get upgrade -y && \
-  apt-get install -y build-essential \
+  apt-get update -q && \
+  apt-get upgrade -yq && \
+  apt-get install -yq build-essential \
     libtool autotools-dev autoconf \
     libssl-dev \
     libboost-all-dev \
@@ -25,7 +25,7 @@ RUN set -xe && \
   make && make install && \
   cd .. && \
   rm -fr koto && \
-  apt-get autoremove -y build-essential \
+  apt-get autoremove -yq build-essential \
     autoconf \
     pkg-config \
     software-properties-common \
