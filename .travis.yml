@@ -10,4 +10,4 @@ before_script:
 
 script:
   - docker build -t "nao20010128nao/docker-kotod" .
-  - docker push "nao20010128nao/docker-bitzenyd"
+  - docker push "nao20010128nao/docker-kotod"
