@@ -1,0 +1,13 @@
+sudo: required
+services:
+- docker
+
+notifications:
+  email: false
+
+before_script:
+  - docker login -u "$DOCKER_USER" -p "$DOCKER_PASS"
+
+script:
+  - docker build -t "nao20010128nao/docker-kotod" .
+  - docker push "nao20010128nao/docker-bitzenyd"
