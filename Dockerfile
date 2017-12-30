@@ -13,7 +13,7 @@ RUN set -xe && \
     pkg-config \
     software-properties-common \
     git \
-    wget curl && \
+    wget curl hexdump && \
   add-apt-repository -y ppa:bitcoin/bitcoin && \
   apt-get update && \
   apt-get install -y libdb4.8-dev libdb4.8++-dev && \
@@ -30,7 +30,7 @@ RUN set -xe && \
     pkg-config \
     software-properties-common \
     git \
-    wget curl && \
+    wget curl hexdump && \
   apt-get clean -y
 
 VOLUME /root/.koto
